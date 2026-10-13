@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conserta Smart | Assistência Técnica Modelo</title>
+    <meta name="description" content="Assistência técnica especializada em celulares e smartphones. Troca de tela, bateria e conectores.">
+    
+    <!-- Tailwind CSS (Carregado direto no navegador para facilitar) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuração de Cores do Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0066cc',
+                            dark: '#111827',
+                            light: '#f9fafb',
+                            gray: '#f3f4f6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Ícones (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-brand-light text-gray-800 font-sans antialiased">
+
+    <!-- CABEÇALHO -->
+    <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2 text-brand-blue">
+                <i data-lucide="smartphone" class="w-8 h-8"></i>
+                <h1 class="text-2xl font-bold text-brand-dark tracking-tight">Conserta <span class="text-brand-blue">Smart</span></h1>
+            </div>
+            
+            <nav class="hidden md:flex gap-8">
+                <a href="#diferenciais" class="text-sm font-semibold text-gray-600 hover:text-brand-blue transition">Por que nós?</a>
+                <a href="#servicos" class="text-sm font-semibold text-gray-600 hover:text-brand-blue transition">Serviços e Preços</a>
+                <a href="#localizacao" class="text-sm font-semibold text-gray-600 hover:text-brand-blue transition">Localização</a>
+            </nav>
+
+            <button onclick="abrirWhatsApp('Olá! Vim pelo site e gostaria de tirar uma dúvida.')" class="bg-brand-blue text-white px-5 py-2 rounded-full font-bold hover:bg-blue-700 transition flex items-center gap-2 text-sm shadow-md shadow-brand-blue/30">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                Falar com Técnico
+            </button>
+        </div>
+    </header>
+
+    <!-- SESSÃO INICIAL (HERO) -->
+    <section class="pt-32 pb-20 px-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 text-center md:text-left">
+            <span class="bg-blue-100 text-brand-blue text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">Especialistas em Mobile</span>
+            <h2 class="text-4xl md:text-6xl font-bold text-brand-dark mb-6 leading-tight">
+                Seu celular <br> <span class="text-brand-blue">novo de novo</span>.
+            </h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
+                Consertos rápidos, peças de alta qualidade e transparência total. Seu smartphone nas mãos de quem entende do assunto.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <button onclick="abrirWhatsApp('Olá! Preciso de um orçamento para o meu celular.')" class="bg-brand-blue text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition shadow-lg shadow-brand-blue/30 flex items-center justify-center gap-2">
+                    <i data-lucide="wrench" class="w-5 h-5"></i>
+                    Solicitar Orçamento Grátis
+                </button>
+            </div>
+        </div>
+        <div class="flex-1 w-full">
+            <!-- Imagem demonstrativa de reparo (pode ser trocada por foto da loja) -->
+            <img src="https://images.unsplash.com/photo-1597740985671-2a8a3b80502e?auto=format&fit=crop&q=80&w=800" alt="Técnico consertando celular" class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3]">
+        </div>
+    </section>
+
+    <!-- POR QUE NOS ESCOLHER? -->
+    <section id="diferenciais" class="py-20 bg-white border-y border-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold text-brand-dark mb-4">Por que escolher a Conserta Smart?</h3>
+                <p class="text-gray-500">Transparência e segurança do orçamento à entrega.</p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-brand-gray p-6 rounded-2xl text-center hover:-translate-y-2 transition duration-300">
+                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-brand-blue">
+                        <i data-lucide="shield-check" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-bold text-brand-dark mb-2">Garantia de 90 Dias</h4>
+                    <p class="text-sm text-gray-600">Garantia total em todos os nossos serviços e peças substituídas.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-brand-gray p-6 rounded-2xl text-center hover:-translate-y-2 transition duration-300">
+                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-brand-blue">
+                        <i data-lucide="calculator" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-bold text-brand-dark mb-2">Orçamento Gratuito</h4>
+                    <p class="text-sm text-gray-600">Avaliamos seu aparelho sem compromisso ou taxas escondidas.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-brand-gray p-6 rounded-2xl text-center hover:-translate-y-2 transition duration-300">
+                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-brand-blue">
+                        <i data-lucide="clock" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-bold text-brand-dark mb-2">Serviço Rápido</h4>
+                    <p class="text-sm text-gray-600">A maioria dos consertos é realizada no mesmo dia para sua conveniência.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-brand-gray p-6 rounded-2xl text-center hover:-translate-y-2 transition duration-300">
+                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-brand-blue">
+                        <i data-lucide="cpu" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-bold text-brand-dark mb-2">Peças Premium</h4>
+                    <p class="text-sm text-gray-600">Trabalhamos com componentes originais e de primeira linha.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS E PREÇOS -->
+    <section id="servicos" class="py-20 bg-brand-light">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold text-brand-dark mb-4">Nossos Serviços e Preços</h3>
+                <p class="text-gray-500">Estimativas de valores. O preço final depende da marca (Samsung, iPhone, Xiaomi, etc.) e modelo do seu aparelho.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Serviço 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="text-xl font-bold text-brand-dark flex items-center gap-2">
+                            <i data-lucide="zap" class="w-5 h-5 text-brand-blue"></i> Troca de Conector de Carga
+                        </h4>
+                        <p class="text-gray-500 text-sm mt-1">Seu celular parou de carregar? Resolvemos o problema.</p>
+                    </div>
+                    <div class="flex items-center gap-6 w-full md:w-auto justify-between md:justify-end border-t border-gray-100 md:border-none pt-4 md:pt-0">
+                        <span class="font-bold text-brand-blue whitespace-nowrap">R$ 40 a R$ 150</span>
+                        <button onclick="abrirWhatsApp('Olá! Preciso trocar o conector de carga do meu celular. Gostaria de um orçamento.')" class="bg-brand-gray text-brand-dark px-4 py-2 rounded font-semibold hover:bg-gray-200 transition text-sm">
+                            Consultar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="text-xl font-bold text-brand-dark flex items-center gap-2">
+                            <i data-lucide="monitor-smartphone" class="w-5 h-5 text-brand-blue"></i> Troca de Tela Completa
+                        </h4>
+                        <p class="text-gray-500 text-sm mt-1">Telas originais ou qualidade premium, com garantia.</p>
+                    </div>
+                    <div class="flex items-center gap-6 w-full md:w-auto justify-between md:justify-end border-t border-gray-100 md:border-none pt-4 md:pt-0">
+                        <span class="font-bold text-brand-blue whitespace-nowrap">Sob Consulta</span>
+                        <button onclick="abrirWhatsApp('Olá! Meu celular quebrou a tela e preciso de um orçamento.')" class="bg-brand-gray text-brand-dark px-4 py-2 rounded font-semibold hover:bg-gray-200 transition text-sm">
+                            Consultar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Serviço 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="text-xl font-bold text-brand-dark flex items-center gap-2">
+                            <i data-lucide="battery-charging" class="w-5 h-5 text-brand-blue"></i> Troca de Bateria
+                        </h4>
+                        <p class="text-gray-500 text-sm mt-1">Baterias novas para acabar com o descarregamento rápido.</p>
+                    </div>
+                    <div class="flex items-center gap-6 w-full md:w-auto justify-between md:justify-end border-t border-gray-100 md:border-none pt-4 md:pt-0">
+                        <span class="font-bold text-brand-blue whitespace-nowrap">A partir de R$ 90</span>
+                        <button onclick="abrirWhatsApp('Olá! Minha bateria está viciada/descarregando rápido. Podem me passar um valor?')" class="bg-brand-gray text-brand-dark px-4 py-2 rounded font-semibold hover:bg-gray-200 transition text-sm">
+                            Consultar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Serviço 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="text-xl font-bold text-brand-dark flex items-center gap-2">
+                            <i data-lucide="droplet" class="w-5 h-5 text-brand-blue"></i> Desoxidação (Banho Químico)
+                        </h4>
+                        <p class="text-gray-500 text-sm mt-1">O celular caiu na água? Não ligue, traga imediatamente.</p>
+                    </div>
+                    <div class="flex items-center gap-6 w-full md:w-auto justify-between md:justify-end border-t border-gray-100 md:border-none pt-4 md:pt-0">
+                        <span class="font-bold text-brand-blue whitespace-nowrap">A partir de R$ 80</span>
+                        <button onclick="abrirWhatsApp('Olá! Meu celular teve contato com água, gostaria de fazer o banho químico.')" class="bg-brand-gray text-brand-dark px-4 py-2 rounded font-semibold hover:bg-gray-200 transition text-sm">
+                            Consultar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center bg-blue-50 border border-blue-100 rounded-2xl p-8">
+                <h4 class="font-bold text-brand-dark text-xl mb-2">Outros Problemas?</h4>
+                <p class="text-gray-600 mb-6">Câmera embaçada, botões que não funcionam, software travado ou problemas na placa? Nós resolvemos.</p>
+                <button onclick="abrirWhatsApp('Olá! Meu celular está com um problema diferente, podem me ajudar?')" class="bg-white border border-brand-blue text-brand-blue px-6 py-3 rounded-full font-bold hover:bg-brand-blue hover:text-white transition shadow-sm">
+                    Explicar meu problema no WhatsApp
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- AVALIAÇÕES -->
+    <section class="py-20 bg-white border-y border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold text-brand-dark mb-2">Clientes Satisfeitos</h3>
+            <p class="text-gray-500 mb-12 text-sm bg-gray-100 inline-block px-3 py-1 rounded">* Avaliações demonstrativas (Exemplo para Portfólio) *</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <!-- Avaliação 1 -->
+                <div class="bg-brand-light p-8 rounded-2xl text-left border border-gray-100">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"Meu iPhone parou de carregar do nada. O técnico me explicou que era só sujeira no conector e resolveu na hora, super honestos!"</p>
+                    <p class="font-bold text-brand-dark">- Mariana L.</p>
+                </div>
+                <!-- Avaliação 2 -->
+                <div class="bg-brand-light p-8 rounded-2xl text-left border border-gray-100">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"Troquei a tela do meu Samsung e ficou perfeito. Preço justo e o aparelho ficou pronto no mesmo dia como prometido."</p>
+                    <p class="font-bold text-brand-dark">- Carlos Silva</p>
+                </div>
+                <!-- Avaliação 3 -->
+                <div class="bg-brand-light p-8 rounded-2xl text-left border border-gray-100">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"Deixei meu celular cair na piscina. Fizeram o banho químico e conseguiram salvar todos os meus dados. Recomendo muito!"</p>
+                    <p class="font-bold text-brand-dark">- Amanda Costa</p>
+                </div>
+            </div>
+            
+            <a href="https://g.page/r/exemplo-de-link" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 border-2 border-brand-blue text-brand-blue px-6 py-3 rounded-full font-bold hover:bg-brand-blue hover:text-white transition">
+                <i data-lucide="star" class="w-5 h-5"></i>
+                Avalie-nos no Google
+            </a>
+        </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO -->
+    <section id="localizacao" class="py-20 bg-brand-dark text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold mb-8">Onde nos encontrar</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-gray-800 p-3 rounded-lg text-brand-blue"><i data-lucide="map-pin" class="w-6 h-6"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg">Endereço (Demonstrativo)</h4>
+                                <p class="text-gray-400">Rua da Tecnologia, 100 - Centro<br>Piracanjuba - GO</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-gray-800 p-3 rounded-lg text-brand-blue"><i data-lucide="clock" class="w-6 h-6"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg">Horário de Atendimento</h4>
+                                <p class="text-gray-400">Seg. a Sex: 08:00 às 18:00<br>Sábados: 08:00 às 12:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="abrirWhatsApp('Olá! Gostaria de saber como chego na loja.')" class="mt-8 bg-brand-blue text-white px-6 py-3 rounded-full font-bold hover:bg-blue-600 transition flex items-center gap-2">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        Enviar mensagem
+                    </button>
+                </div>
+                
+                <!-- Mapa Fictício -->
+                <div class="bg-gray-800 h-80 rounded-2xl border border-gray-700 flex flex-col items-center justify-center text-center p-6">
+                    <i data-lucide="map" class="w-12 h-12 text-brand-blue mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Mapa Interativo</h4>
+                    <p class="text-gray-400 text-sm max-w-xs">No site do cliente real, inserimos aqui o mapa exato do Google Maps da loja.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-[#0b101a] text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <p class="font-bold text-white text-lg flex items-center justify-center md:justify-start gap-2 mb-1">
+                    <i data-lucide="smartphone" class="w-5 h-5 text-brand-blue"></i> Conserta Smart
+                </p>
+                <p class="text-sm">© <script>document.write(new Date().getFullYear())</script> Todos os direitos reservados.</p>
+            </div>
+            
+            <p class="text-xs bg-gray-800 px-3 py-1 rounded text-gray-500 font-mono">
+                MODELO DE DEMONSTRAÇÃO
+            </p>
+
+            <a href="https://portifolio-vibecoding.vercel.app/" target="_blank" class="text-sm hover:text-brand-blue transition flex items-center gap-2">
+                Site desenvolvido por <strong>Gomark</strong>
+            </a>
+        </div>
+    </footer>
+
+    <!-- BOTÃO WHATSAPP FLUTUANTE -->
+    <button onclick="abrirWhatsApp('Olá! Preciso de ajuda com meu aparelho.')" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg shadow-green-500/30 hover:-translate-y-1 hover:scale-105 transition-all z-50 flex items-center justify-center group">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+        <!-- Tooltip -->
+        <span class="absolute right-16 bg-white text-gray-800 text-sm px-4 py-2 rounded-lg shadow-lg font-bold opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap">
+            Fazer Orçamento
+        </span>
+    </button>
+
+    <!-- Script de Inicialização -->
+    <script src="script.js"></script>
+</body>
+</html>
