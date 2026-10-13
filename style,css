@@ -1,0 +1,22 @@
+/* Configurações básicas para melhorar a rolagem da página */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Deixa a barra de rolagem mais bonita (apenas navegadores baseados no Chrome/Edge) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f3f4f6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0066cc;
+}
